@@ -1,23 +1,22 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Logo from "../public/logo.svg"
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Netlipears</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <a href="/">
+            <Logo className="w-2/5 h-auto mx-auto" />
+            <span className="relative leading-tight text-center text-8xl font-display text-green">Netlipears</span>
+          </a>
         </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -52,12 +51,11 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://leslie.dev"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          Built by 👩🏻‍💻 Leslie Cohn-Wein
         </a>
       </footer>
     </div>

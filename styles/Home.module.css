@@ -35,15 +35,36 @@
   align-items: center;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.title a span::before {
+  background-color: #fff;
+  bottom: 14px;
+  content: "";
+  height: 8px;
+  left: -9px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 36px;
+  z-index: -1;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.title a span::after {
+  background-color: #0195C4;
+  bottom: 14px;
+  content: "";
+  height: 8px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transition: all 0.25s ease-out 0s;
+  visibility: hidden;
+  width: 100%;
+  z-index: -2;
+}
+
+.title a:hover span::after {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 .title {
@@ -52,14 +73,8 @@
   font-size: 4rem;
 }
 
-.title,
-.description {
+.title {
   text-align: center;
-}
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
 }
 
 .code {

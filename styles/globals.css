@@ -1,3 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'dillan';
+  src: url('/fonts/MADE-Dillan-latin-sm.woff2');
+ }
+
+
 html,
 body {
   padding: 0;
