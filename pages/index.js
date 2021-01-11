@@ -14,7 +14,7 @@ export default function Home() {
         <h1 className={styles.title}>
           <a href="/">
             <Logo className="w-2/5 h-auto mx-auto" />
-            <span className="relative leading-tight text-center text-8xl font-display text-green">Netlipears</span>
+            <span className="relative leading-tight text-center text-8xl font-display text-blue">Netlipears</span>
           </a>
         </h1>
 
