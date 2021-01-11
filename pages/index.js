@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Logo from "../public/logo.svg"
+import { attributes, react as HomeContent } from '../content/pages/home.md';
 
 export default function Home() {
+  let { title, cats } = attributes;
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,6 +20,16 @@ export default function Home() {
             <span className="relative leading-tight text-center text-8xl font-display text-blue">Netlipears</span>
           </a>
         </h1>
+        <h2>{title}</h2>
+
+        <ul>
+          {cats.map((cat, k) => (
+            <li key={k}>
+              <h2>{cat.name}</h2>
+              <p>{cat.description}</p>
+            </li>
+          ))}
+        </ul>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>

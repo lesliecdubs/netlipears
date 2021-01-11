@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start"
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export"
   },
   "dependencies": {
     "autoprefixer": "^10.2.1",
+    "netlify-cms-app": "^2.14.10",
     "next": "10.0.5",
     "next-images": "^1.6.2",
     "postcss": "^8.2.4",
@@ -19,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-react": "^7.12.10",
-    "babel-plugin-inline-react-svg": "^1.1.2"
+    "babel-plugin-inline-react-svg": "^1.1.2",
+    "frontmatter-markdown-loader": "^3.6.2"
   }
 }
