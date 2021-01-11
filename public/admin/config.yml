@@ -19,17 +19,6 @@ collections:
       - label: "Creation Date"
         name: "date"
         widget: "datetime"
-      - label: Associated team
-        name: related_team
-        widget: relation
-        required: true
-        multiple: true
-        hint: >-
-          The team(s) this member should be a part of
-        collection: teams
-        valueField: name
-        searchFields: ["name"]
-        displayFields: ["name"]
   - name: "people"
     label: "People"
     folder: "content/people"
@@ -45,3 +34,14 @@ collections:
       - label: "Creation Date"
         name: "date"
         widget: "datetime"
+      - label: Associated team
+        name: related_team
+        widget: relation
+        required: true
+        multiple: true
+        hint: >-
+          The team(s) this member should be a part of
+        collection: teams
+        valueField: name
+        searchFields: ["name"]
+        displayFields: ["name"]
