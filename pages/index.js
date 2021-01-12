@@ -1,11 +1,9 @@
+import { GetStaticProps } from "next";
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Logo from "../public/logo.svg"
-import { attributes, react as HomeContent } from '../content/pages/home.md';
 
 export default function Home() {
-  let { title, cats } = attributes;
-
   return (
     <div className={styles.container}>
       <Head>
@@ -20,16 +18,6 @@ export default function Home() {
             <span className="relative leading-tight text-center text-8xl font-display text-blue">Netlipears</span>
           </a>
         </h1>
-        <h2>{title}</h2>
-
-        <ul>
-          {cats.map((cat, k) => (
-            <li key={k}>
-              <h2>{cat.name}</h2>
-              <p>{cat.description}</p>
-            </li>
-          ))}
-        </ul>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -74,3 +62,22 @@ export default function Home() {
     </div>
   )
 }
+
+// css wheel! https://codepen.io/BAUS/pen/ZYPXRP/
+// example: https://nextjs-netlify-blog-template.netlify.app/posts
+// see code: https://github.com/wutali/nextjs-netlify-blog-template/blob/master/src/lib/posts.ts
+// export const getStaticProps: GetStaticProps = async () => {
+//   const posts = listPostContent(1, config.posts_per_page);
+//   const tags = listTags();
+//   const pagination = {
+//     current: 1,
+//     pages: Math.ceil(countPosts() / config.posts_per_page),
+//   };
+//   return {
+//     props: {
+//       posts,
+//       tags,
+//       pagination,
+//     },
+//   };
+// };
